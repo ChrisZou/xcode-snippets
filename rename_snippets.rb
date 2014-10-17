@@ -1,13 +1,8 @@
 #!/usr/bin/env ruby
 #
 
-#All the files in current directory
-files = Dir["*"]
-
-#Remove ruby file out of the array
-files.each do |file|
-    files.delete(file) if file.end_with?(".rb")
-end
+#All code snippet files in current directory
+files = Dir["*.codesnippet"]
 
 #Get the text from a xml element "<string>text</string>"
 def get_text(str)
